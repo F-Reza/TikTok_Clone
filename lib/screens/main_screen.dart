@@ -19,6 +19,7 @@ class _MainScreenState extends State<MainScreen> {
   final _widgets = [
     const HomeScreen(),
     const FriendsScreen(),
+    const HomeScreen(),
     const InboxScreen(),
     const ProfileScreen()
   ];
@@ -42,23 +43,34 @@ class _MainScreenState extends State<MainScreen> {
         showSelectedLabels: true,
         showUnselectedLabels: true,
         iconSize: 30,
-        items: const [
-          BottomNavigationBarItem(
+        items: [
+          const BottomNavigationBarItem(
             icon: Icon(FluentIcons.home_16_regular),
             activeIcon: Icon(FluentIcons.home_20_filled),
             label: 'Home'
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(FluentIcons.people_16_regular),
             activeIcon: Icon(FluentIcons.people_20_filled),
             label: 'Friends'
           ),
           BottomNavigationBarItem(
+              icon: Container(
+                width: 55, height: 30,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white
+                ),
+                  child: const Icon(FluentIcons.add_16_filled,color: Colors.black,),
+              ),
+              label: ''
+          ),
+          const BottomNavigationBarItem(
             icon: Icon(FluentIcons.chat_16_regular),
             activeIcon: Icon(FluentIcons.chat_20_filled),
             label: 'Inbox'
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(FluentIcons.person_16_regular),
             activeIcon: Icon(FluentIcons.person_20_filled),
             label: 'Profile'

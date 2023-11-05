@@ -29,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: Colors.black,
       body: Center(
-        child: Image.asset('images/tiktok-logo.png',height: 180,),
+        child: Image.asset('assets/images/tiktok-logo.png',height: 180,),
       ),
     );
   }
